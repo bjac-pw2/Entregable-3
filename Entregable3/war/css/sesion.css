@@ -1,0 +1,26 @@
+.in{
+	border-style: none;
+	width: 110px;
+	height: 25px;
+	background-color: #CCFFFF;
+	padding: 0px 5px;
+	box-shadow: #099 0px 0px 5px inset;
+    -webkit-box-shadow: #099 0px 0px 5px inset;
+    -moz-box-shadow: #099 0px 0px 5px inset;
+    color: #099;
+}
+.entrar{
+	border-style: none;
+	width: 245px;
+	height: 25px;
+	margin-top: 5px;
+	background: #099;
+	color: white;
+}
+.entrar:hover{
+	background-color: #CCFFFF;
+	color: #099;
+}
+#sesion form a{
+	text-decoration: none;
+}
