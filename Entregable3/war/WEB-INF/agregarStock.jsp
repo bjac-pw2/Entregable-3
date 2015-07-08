@@ -71,17 +71,30 @@
 			<select name='id'>
 				<option value=''></option>
 				<% for(Medicamento m: medicamentos){%>
-					<% if(m.getId()!=0){%>
+					<% if(m.getId()!=0 && m.getEstado()==1){%>
 						<option value='<%= m.getId() %>'><%= m.getNombre() %> - <%= m.getTipo()%></option>
 					<% }%>
 				<% }%>
-			</select><br>
+			</select><br>			
 			<% q.closeAll(); pm1.close(); %>
 	<span class='lf'>Ingrese la cantidad a aumentar: </span><input required type='number' min='1' name='stock'><br>
 	<button class='enviar' type='submit'>Aumentar</button><br>
 	
 	</form>
-		
+	
+	<form action="estadoMedicamento">
+		<span class='lf' >Selecciona el medicamento: </span>
+			<select name='id'>
+				<option value=''></option>
+				<% for(Medicamento m: medicamentos){%>
+					<% if(m.getId()!=0 && m.getEstado()==1){%>
+						<option value='<%= m.getId() %>'><%= m.getNombre() %> - <%= m.getTipo()%></option>
+					<% }%>
+				<% }%>
+			</select><br>
+		<button class='enviar' type='submit'>Desabilitar</button><br>
+	</form>
+	
 		
 	</div>
 	</div>

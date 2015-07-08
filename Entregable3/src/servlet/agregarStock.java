@@ -14,9 +14,6 @@ import bjac.Medicamento;
 public class agregarStock extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
-		//String id=req.getParameter("id");
-		//String stock=req.getParameter("stock");
-		
 		PersistenceManager pm1 = PMF.get().getPersistenceManager();
 		Query q = pm1.newQuery(Medicamento.class);
 		@SuppressWarnings("unchecked")

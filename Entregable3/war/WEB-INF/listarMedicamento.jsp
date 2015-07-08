@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Lista de Administradores</title>
+	<title>Lista de Medicamentos</title>
 	<link rel="stylesheet" href="css/tabla.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/sesion.css">
@@ -42,7 +42,6 @@
 				<ul>
 					<li><a href="controlJSP?option=6">INICIO</a>
 					</li>
-					<li><a href='controlJSP?option=20'>HORARIO</a></li>
 					<li><a href='#'>MEDICAMENTO</a>
 						<div>
 							<ul>
@@ -66,6 +65,7 @@
 				<div class="cell">Nombre</div>
 				<div class="cell">Tipo</div>
 				<div class="cell">Stock</div>
+				<div class="cell">Estado</div>
 			</div>
 		<% List<Medicamento> medicamentos = (List<Medicamento>) request.getAttribute("medicamentos");%>
 		<%for( Medicamento p : medicamentos) {%>
@@ -74,6 +74,7 @@
 					<div class="cell"><p><%= p.getNombre() %></p></div>
 					<div class="cell"><p><%= p.getTipo() %></p></div>
 					<div class="cell"><p><%= p.getStock() %></p></div>
+					<div class="cell"><p><%= p.getEstado()==1?"Habilitado":"Desahabilitado" %></p></div>
 				</div>
 			<%}%>
 		</div>	

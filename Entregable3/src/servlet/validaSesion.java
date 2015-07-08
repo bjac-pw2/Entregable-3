@@ -67,7 +67,6 @@ public class validaSesion extends HttpServlet{
 						sesion.setAttribute("usuario",a.getDNI());
 						sesion.setAttribute("nombre", a.getNombreUsuario());
 						sesion.setAttribute("tipo", "Farmaceutico");
-						resp.getWriter().print("seeeee");
 						resp.sendRedirect("controlJSP?option=22");
 						return;
 					}

@@ -18,6 +18,8 @@ public class Medicamento {
 	private String tipo;
 	@Persistent
 	private float stock;
+	@Persistent
+	private boolean estado;
 	
 	public Medicamento(float id, String nombre, String tipo, float stock) {
 		super();
@@ -25,6 +27,7 @@ public class Medicamento {
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.stock = stock;
+		this.estado=true;
 	}
 	
 	public void aumentarStock(float stock){
@@ -71,7 +74,17 @@ public class Medicamento {
 	public void setId(float id) {
 		this.id = id;
 	}
-
+	
+	public int getEstado(){
+		if(estado)
+			return 1;
+		return 0;
+	}
+	
+	public void setEstado(){
+			this.estado=!this.estado;
+	}
+	
 	public String toString() {
 		return nombre +"\t"+tipo +"\t"+stock;
 	}
